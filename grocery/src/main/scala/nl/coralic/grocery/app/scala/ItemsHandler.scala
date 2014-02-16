@@ -8,7 +8,7 @@ object ItemsHandler {
   def apply() = new ItemsHandler
 }
 
-class ItemsHandler {
+class ItemsHandler extends ItemsRequestTrait {
 
   val items = new mutable.ListBuffer[Item]
 
