@@ -1,0 +1,1 @@
+Rest-api is the middle application. It consists of one layer (Controllers) from [the clean architecture](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html).

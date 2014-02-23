@@ -1,11 +1,11 @@
 package nl.coralic.grocery.rest.api
 
-import nl.coralic.grocery.app.scala.interfaces.GroceryListRequestTrait
 import org.mockito.Mockito._
+import nl.coralic.grocery.app.scala.api.GroceryListApi
 
-class RestApiSpec extends BaseSpec with Routes {
+class RestRoutesSpec extends BaseSpec with Routes {
 
-  private val mockO = mock[GroceryListRequestTrait]
+  private val mockO = mock[GroceryListApi]
   when(mockO.allItems).thenThrow(new RuntimeException())
 
   override def groceryList = mockO

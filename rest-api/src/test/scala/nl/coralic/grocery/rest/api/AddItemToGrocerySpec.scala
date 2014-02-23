@@ -2,11 +2,11 @@ package nl.coralic.grocery.rest.api
 import RestMessages._
 import spray.httpx.SprayJsonSupport._
 import spray.httpx.unmarshalling._
-import nl.coralic.grocery.app.scala.interfaces.GroceryListRequestTrait
+import nl.coralic.grocery.app.scala.api.GroceryListApi
 
-class AddItemToGrocerySpec extends BaseSpec with GroceryListApi {
+class AddItemToGrocerySpec extends BaseSpec with GroceryListRoutes {
 
-  override def groceryList = mock[GroceryListRequestTrait]
+  override def groceryList = mock[GroceryListApi]
 
   "User" should {
     "be able to add an item to the grocery list" in {

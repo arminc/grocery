@@ -1,15 +1,14 @@
 package nl.coralic.grocery.rest.api
 
-import nl.coralic.grocery.app.scala.interfaces.GroceryListRequestTrait
-import nl.coralic.grocery.app.scala.{Item => GroceryItem}
 import org.mockito.Mockito._
 import RestMessages._
 import spray.httpx.SprayJsonSupport._
 import spray.httpx.unmarshalling._
+import nl.coralic.grocery.app.scala.api.{GroceryItem, GroceryListApi}
 
-class ViewItemsInGroceryListSpec extends BaseSpec with GroceryListApi {
+class ViewItemsInGroceryListSpec extends BaseSpec with GroceryListRoutes {
 
-  private val mockO = mock[GroceryListRequestTrait]
+  private val mockO = mock[GroceryListApi]
   val groceryData = List(GroceryItem("milk", 1), GroceryItem("bread", 1))
   when(mockO.allItems).thenReturn(groceryData)
 

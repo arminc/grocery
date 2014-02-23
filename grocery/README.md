@@ -1,0 +1,1 @@
+Grocery is the core application. It consists of the two inner layers (Entities and Use Cases) from [the clean architecture](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html).

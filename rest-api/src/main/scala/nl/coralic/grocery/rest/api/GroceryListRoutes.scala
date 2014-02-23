@@ -3,11 +3,11 @@ package nl.coralic.grocery.rest.api
 import spray.routing.HttpService
 import RestMessages._
 import spray.httpx.SprayJsonSupport._
-import nl.coralic.grocery.app.scala.interfaces.GroceryListRequestTrait
+import nl.coralic.grocery.app.scala.api.GroceryListApi
 
-trait GroceryListApi extends HttpService {
+trait GroceryListRoutes extends HttpService {
 
-  def groceryList: GroceryListRequestTrait
+  def groceryList: GroceryListApi
 
   val addItem = path("add") {
     post {

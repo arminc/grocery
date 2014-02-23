@@ -1,6 +1,10 @@
 grocery
 =======
-This is my playground application. I am using it to create a modern scalable app using all kind of new technology and tools.
+This is my playground application. The goal of this application is:
+
+* Creating a modern scalable app using all kind of new technology and tools
+* Creating a reference for [the clean architecture](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+* Creating a DevOps friendly environment and everything around it 
 
 v1
 ===
