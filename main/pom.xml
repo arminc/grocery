@@ -9,7 +9,7 @@
         <version>1.2-SNAPSHOT</version>
     </parent>
 
-    <artifactId>rest-api</artifactId>
+    <artifactId>main</artifactId>
     <version>1.2-SNAPSHOT</version>
 
     <build>
@@ -41,19 +41,14 @@
         </dependency>
 
         <dependency>
-            <groupId>io.spray</groupId>
-            <artifactId>spray-json_${scala.major.version}</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor_${scala.major.version}</artifactId>
         </dependency>
 
-        <!-- project specific dependencies -->
+        <!-- project specific ddependencies-->
         <dependency>
             <groupId>io.spray</groupId>
-            <artifactId>spray-routing</artifactId>
+            <artifactId>spray-can</artifactId>
             <version>1.2.0</version>
         </dependency>
 
@@ -68,17 +63,10 @@
             <artifactId>mockito-all</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>io.spray</groupId>
-            <artifactId>spray-testkit</artifactId>
-            <version>1.2.0</version>
-            <scope>test</scope>
-        </dependency>
-
         <!-- internal project dependencies -->
         <dependency>
             <groupId>nl.coralic.grocery</groupId>
-            <artifactId>app.scala</artifactId>
+            <artifactId>rest-api</artifactId>
             <version>1.2-SNAPSHOT</version>
         </dependency>
     </dependencies>
