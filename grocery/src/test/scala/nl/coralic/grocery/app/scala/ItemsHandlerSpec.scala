@@ -15,20 +15,20 @@ class ItemsHandlerSpec extends BaseSpec {
 
     "allow retrieving the item name" in {
       receiptHandler.addItem("milk", 10)
-      val item = receiptHandler.items.head
+      val item = receiptHandler.getItems.head
       item.name should equal("milk")
     }
 
     "allow retrieving the item price" in {
       receiptHandler.addItem("milk", 10.1)
-      val item = receiptHandler.items.head
+      val item = receiptHandler.getItems.head
       item.price should equal(10.1)
     }
 
     "allow storing multiple items" in {
       receiptHandler.addItem("milk", 15)
       receiptHandler.addItem("chocolate", 20)
-      val items = receiptHandler.items
+      val items = receiptHandler.getItems
       items.length should equal(2)
 
       items.head.name should equal("milk")
