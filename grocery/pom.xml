@@ -6,7 +6,7 @@
 
     <groupId>nl.coralic.grocery</groupId>
     <artifactId>app.scala</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
 
     <properties>
         <scala.full.version>2.10.2</scala.full.version>
