@@ -6,11 +6,11 @@
     <parent>
         <groupId>nl.coralic.grocery</groupId>
         <artifactId>parent</artifactId>
-        <version>1.1-SNAPSHOT</version>
+        <version>1.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>rest-api</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
 
     <build>
         <plugins>
@@ -80,7 +80,7 @@
         <dependency>
             <groupId>nl.coralic.grocery</groupId>
             <artifactId>app.scala</artifactId>
-            <version>1.1-SNAPSHOT</version>
+            <version>1.2-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
