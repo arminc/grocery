@@ -1,9 +1,12 @@
 package nl.coralic.grocery.rest.api
 import RestMessages._
 import spray.httpx.SprayJsonSupport._
+import spray.httpx.unmarshalling._
+import nl.coralic.grocery.app.scala.interfaces.ItemsRequestTrait
 
+class AddItemsSpec extends BaseSpec with ItemsApi {
 
-class AddItemsSpec extends BaseSpec with ItemsApi{
+  override def groceryList = mock[ItemsRequestTrait]
 
   "User" should {
     "be able to add an item" in {
@@ -11,14 +14,7 @@ class AddItemsSpec extends BaseSpec with ItemsApi{
       val response = Post("/item", item) ~> addItem
       response ~> check {
         status.isSuccess should equal(true)
-        println(body)
-      }
-    }
-
-    "get an error" when {
-
-      "response takes more than 5 seconds" in {
-        println()
+        body.as[Item] should equal(Right(item))
       }
     }
   }
