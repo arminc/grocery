@@ -18,6 +18,7 @@
         <module>core</module>
         <module>rest-api</module>
         <module>main</module>
+        <module>assembly</module>
     </modules>
 
     <properties>
