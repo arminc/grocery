@@ -8,7 +8,7 @@ This is my playground application. The goal of this application is:
 #### v1.3
 Playing around with version, back to using the development version 1.0-SNAPSHOT.
 
-Adding the assembly module.
+Adding the assembly module that builds a docker image.
 
 #### v1.2
 My primary goal is modules should be independent, all the modules where also build wise separated but for the development process it makes more sense to have a proper build structure. There is still a full separation of the independent modules but they are working together so the build structure helps this process. 
