@@ -1,5 +1,11 @@
 *.class
 *.log
 *.iml
-*/.idea/*
-*/target/*
+.idea/*
+target/*
+
+**/*.class
+**/*.log
+**/*.iml
+**/.idea/*
+**/target/*
