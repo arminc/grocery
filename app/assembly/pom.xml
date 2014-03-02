@@ -7,9 +7,17 @@
     <parent>
         <groupId>nl.coralic.grocery.app</groupId>
         <artifactId>parent</artifactId>
-        <version>1.3-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>assembly</artifactId>
 
+    <dependencies>
+        <!-- internal project dependencies -->
+        <dependency>
+            <groupId>nl.coralic.grocery.app</groupId>
+            <artifactId>main</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

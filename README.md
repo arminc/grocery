@@ -6,6 +6,10 @@ This is my playground application. The goal of this application is:
 * Creating a reference for [the clean architecture](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 * Creating a DevOps friendly environment and everything around it 
 
+v1.3
+===
+Playing around with version, back to using the development version 1.0-SNAPSHOT
+
 v1.2
 ===
 My primary goal is modules should be independent, all the modules where also build wise separated but for the development process it makes more sense to have a proper build structure. There is still a full separation of the independent modules but they are working together so the build structure helps this process. 

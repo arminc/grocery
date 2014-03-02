@@ -6,7 +6,7 @@
 
     <groupId>nl.coralic.grocery</groupId>
     <artifactId>full-version</artifactId>
-    <version>1.3-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
