@@ -1,7 +1,7 @@
-package nl.coralic.grocery.rest.api
+package nl.coralic.grocery.app.rest.api
 
 import spray.routing.HttpServiceActor
-import nl.coralic.grocery.app.scala.api.GroceryListApi
+import nl.coralic.grocery.app.core.api.GroceryListApi
 
 class RestActor(grocery: GroceryListApi) extends HttpServiceActor with Routes {
 

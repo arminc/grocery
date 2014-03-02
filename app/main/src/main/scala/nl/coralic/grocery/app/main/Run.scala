@@ -1,8 +1,7 @@
-package nl.coralic.grocery.main
+package nl.coralic.grocery.app.main
 
 import akka.actor.{ActorSystem, Props}
-import nl.coralic.grocery.rest.api.RestActor
-import nl.coralic.grocery.app.scala.GroceryList
+import nl.coralic.grocery.app.rest.api.RestActor
 import com.typesafe.config.ConfigFactory
 import akka.io.IO
 import akka.io.Tcp.CommandFailed
@@ -11,10 +10,11 @@ import akka.pattern.ask
 import akka.util.Timeout
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext
+import nl.coralic.grocery.app.core.GroceryList
 
 object Run extends App {
 
-  implicit val system = ActorSystem("IpAnalyserSystem", ConfigFactory.load())
+  implicit val system = ActorSystem("GrocerySystem", ConfigFactory.load())
   private val rest = system.actorOf(Props(classOf[RestActor], GroceryList()))
   implicit def timeout: Timeout = 10.seconds
   implicit def executionContext: ExecutionContext = system.dispatcher

@@ -1,4 +1,4 @@
-package nl.coralic.grocery.app.scala
+package nl.coralic.grocery.app.core
 
 class GroceryListSpec extends BaseSpec {
 

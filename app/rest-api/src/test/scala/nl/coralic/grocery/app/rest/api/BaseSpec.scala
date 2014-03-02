@@ -1,4 +1,4 @@
-package nl.coralic.grocery.rest.api
+package nl.coralic.grocery.app.rest.api
 
 import org.scalatest.{WordSpecLike, Matchers}
 import spray.testkit.ScalatestRouteTest

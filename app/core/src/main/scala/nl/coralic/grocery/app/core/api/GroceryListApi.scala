@@ -1,4 +1,4 @@
-package nl.coralic.grocery.app.scala.api
+package nl.coralic.grocery.app.core.api
 
 case class GroceryItem(name: String, price: Double)
 

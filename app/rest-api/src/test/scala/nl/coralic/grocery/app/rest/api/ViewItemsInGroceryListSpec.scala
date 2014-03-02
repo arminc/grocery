@@ -1,10 +1,11 @@
-package nl.coralic.grocery.rest.api
+package nl.coralic.grocery.app.rest.api
 
 import org.mockito.Mockito._
 import RestMessages._
 import spray.httpx.SprayJsonSupport._
 import spray.httpx.unmarshalling._
-import nl.coralic.grocery.app.scala.api.{GroceryItem, GroceryListApi}
+import nl.coralic.grocery.app.core.api.GroceryItem
+import nl.coralic.grocery.app.core.api.{GroceryItem, GroceryListApi}
 
 class ViewItemsInGroceryListSpec extends BaseSpec with GroceryListRoutes {
 

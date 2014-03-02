@@ -1,9 +1,9 @@
-package nl.coralic.grocery.rest.api
+package nl.coralic.grocery.app.rest.api
 
 import spray.routing.HttpService
 import RestMessages._
 import spray.httpx.SprayJsonSupport._
-import nl.coralic.grocery.app.scala.api.GroceryListApi
+import nl.coralic.grocery.app.core.api.GroceryListApi
 
 trait GroceryListRoutes extends HttpService {
 

@@ -1,7 +1,7 @@
-package nl.coralic.grocery.app.scala
+package nl.coralic.grocery.app.core
 
-import scala.collection.mutable
-import nl.coralic.grocery.app.scala.api.{GroceryItem, GroceryListApi}
+import _root_.scala.collection.mutable
+import nl.coralic.grocery.app.core.api.{GroceryItem, GroceryListApi}
 
 object GroceryList {
   def apply() = new GroceryList
