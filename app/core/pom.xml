@@ -7,11 +7,10 @@
     <parent>
         <groupId>nl.coralic.grocery.app</groupId>
         <artifactId>parent</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>core</artifactId>
-    <version>1.2-SNAPSHOT</version>
 
     <properties>
         <scala.full.version>2.10.2</scala.full.version>
