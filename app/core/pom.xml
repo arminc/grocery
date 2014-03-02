@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>nl.coralic.grocery</groupId>
+        <groupId>nl.coralic.grocery.app</groupId>
         <artifactId>parent</artifactId>
         <version>1.2-SNAPSHOT</version>
     </parent>
 
-    <artifactId>app.scala</artifactId>
+    <artifactId>core</artifactId>
     <version>1.2-SNAPSHOT</version>
 
     <properties>

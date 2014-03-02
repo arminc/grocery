@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>nl.coralic.grocery</groupId>
+        <groupId>nl.coralic.grocery.app</groupId>
         <artifactId>parent</artifactId>
         <version>1.2-SNAPSHOT</version>
     </parent>
 
-    <artifactId>main</artifactId>
+    <artifactId>rest-api</artifactId>
     <version>1.2-SNAPSHOT</version>
 
     <build>
@@ -41,14 +41,19 @@
         </dependency>
 
         <dependency>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-json_${scala.major.version}</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor_${scala.major.version}</artifactId>
         </dependency>
 
-        <!-- project specific ddependencies-->
+        <!-- project specific dependencies -->
         <dependency>
             <groupId>io.spray</groupId>
-            <artifactId>spray-can</artifactId>
+            <artifactId>spray-routing</artifactId>
             <version>1.2.0</version>
         </dependency>
 
@@ -63,10 +68,17 @@
             <artifactId>mockito-all</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-testkit</artifactId>
+            <version>1.2.0</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- internal project dependencies -->
         <dependency>
             <groupId>nl.coralic.grocery</groupId>
-            <artifactId>rest-api</artifactId>
+            <artifactId>app.scala</artifactId>
             <version>1.2-SNAPSHOT</version>
         </dependency>
     </dependencies>

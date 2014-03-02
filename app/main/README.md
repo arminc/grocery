@@ -1,0 +1,2 @@
+Main is the bootstrap module. It is not one of the layers of [the clean architecture](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html),
+but it helps in creating independent modules.
