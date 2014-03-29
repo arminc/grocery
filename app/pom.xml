@@ -18,8 +18,16 @@
         <module>core</module>
         <module>rest-api</module>
         <module>main</module>
-        <module>assembly</module>
     </modules>
+
+    <profiles>
+        <profile>
+            <id>int</id>
+            <modules>
+                <module>assembly</module>
+            </modules>
+        </profile>
+    </profiles>
 
     <properties>
         <scala.major.version>2.10</scala.major.version>
