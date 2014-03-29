@@ -25,6 +25,7 @@
             <id>int</id>
             <modules>
                 <module>assembly</module>
+                <module>integration-test</module>
             </modules>
         </profile>
     </profiles>
