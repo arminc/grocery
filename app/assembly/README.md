@@ -1,5 +1,5 @@
-Assembly module is responsible of building a independently runnable Grocery app using Docker. It first makes the grocery app runnable jar with the required dependencies.
-Then it builds the docker image under the "armin/grocery:v1"
+Assembly module is responsible of building a independently runnable Grocery app using Docker. It first makes the Grocery
+app runnable jar with the required dependencies and then it builds the docker image under the "armin/grocery:v1"
 
 ### Run
 ##### Run the image

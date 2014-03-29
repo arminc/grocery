@@ -1,1 +1,1 @@
-This is the grocery application, the backend of it.
+This is the grocery application, it is the backend.
