@@ -10,36 +10,15 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>nl.coralic.grocery.app</groupId>
+    <groupId>nl.coralic.grocery.backend-app</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>core</module>
-        <module>rest-api</module>
-        <module>main</module>
+        <module>app</module>
+        <module>assembly</module>
+        <module>integration-test</module>
     </modules>
-
-    <profiles>
-        <profile>
-            <id>int</id>
-            <modules>
-                <module>assembly</module>
-                <module>integration-test</module>
-            </modules>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.codehaus.mojo</groupId>
-                            <artifactId>exec-maven-plugin</artifactId>
-                            <version>1.2.1</version>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
-    </profiles>
 
     <properties>
         <scala.major.version>2.10</scala.major.version>
@@ -102,6 +81,12 @@
                         </execution>
                     </executions>
                 </plugin>
+                <!-- needed by assembly and integration-test -->
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>1.2.1</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -118,33 +103,6 @@
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-compiler</artifactId>
                 <version>${scala.full.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.spray</groupId>
-                <artifactId>spray-json_${scala.major.version}</artifactId>
-                <version>1.2.5</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.typesafe.akka</groupId>
-                <artifactId>akka-actor_${scala.major.version}</artifactId>
-                <version>2.2.3</version>
-            </dependency>
-
-            <!-- test dependencies -->
-            <dependency>
-                <groupId>org.scalatest</groupId>
-                <artifactId>scalatest_2.10</artifactId>
-                <version>2.0</version>
-                <scope>test</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-all</artifactId>
-                <version>1.9.5</version>
-                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
