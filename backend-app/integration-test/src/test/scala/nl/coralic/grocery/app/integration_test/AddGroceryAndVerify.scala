@@ -24,7 +24,7 @@ class AddGroceryAndVerify extends Simulation {
     .exec(http("Verify no grocery items available")
     .get("/grocery/items")
     .check(status.is(200)
-    ,jsonPath("$.").count.is(2)))
+    ,jsonPath("$.").count.is(1)))
 
   setUp(scn.inject(atOnce(1 user)))
     .protocols(httpProtocol)
