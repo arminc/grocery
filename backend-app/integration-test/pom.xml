@@ -31,6 +31,17 @@
                 <groupId>io.gatling</groupId>
                 <artifactId>gatling-maven-plugin</artifactId>
                 <version>2.0.0-M3a</version>
+                <executions>
+                    <execution>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <simulationClass>nl.coralic.grocery.app.integration_test.AddGroceryAndVerify</simulationClass>
+                </configuration>
             </plugin>
             <plugin> <!-- run Grocery application from docker -->
                 <groupId>org.codehaus.mojo</groupId>
