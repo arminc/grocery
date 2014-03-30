@@ -12,6 +12,11 @@
 
     <artifactId>integration-test</artifactId>
 
+    <properties>
+        <integration.test.port>9999</integration.test.port>
+        <integration.test.docker.name>integration-test</integration.test.docker.name>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -22,11 +27,17 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
+            <plugin> <!-- running Gatling tests -->
+                <groupId>io.gatling</groupId>
+                <artifactId>gatling-maven-plugin</artifactId>
+                <version>2.0.0-M3a</version>
+            </plugin>
             <plugin> <!-- run Grocery application from docker -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <executions>
                     <execution> <!-- start docker image -->
+                        <id>start</id>
                         <phase>pre-integration-test</phase>
                         <goals>
                             <goal>exec</goal>
@@ -37,9 +48,39 @@
                                 <argument>run</argument>
                                 <argument>-d</argument>
                                 <argument>-t</argument>
+                                <argument>--name</argument>
+                                <argument>integration-test</argument>
                                 <argument>-p</argument>
-                                <argument>9090:9090</argument>
+                                <argument>${integration.test.port}:9090</argument>
                                 <argument>armin/grocery:v1</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution> <!-- stop docker image -->
+                        <id>stop</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>docker</executable>
+                            <arguments>
+                                <argument>stop</argument>
+                                <argument>integration-test</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution> <!-- remove docker image -->
+                        <id>remove</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>docker</executable>
+                            <arguments>
+                                <argument>rm</argument>
+                                <argument>integration-test</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -57,6 +98,14 @@
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-compiler</artifactId>
+        </dependency>
+
+        <!-- project specific dependencies -->
+        <dependency>
+            <groupId>io.gatling.highcharts</groupId>
+            <artifactId>gatling-charts-highcharts</artifactId>
+            <version>2.0.0-M3a</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
