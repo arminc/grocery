@@ -8,6 +8,9 @@ This is my playground application. The goal of this application is:
 ### Requirements
 To be able to build the full Grocery application [Docker](https://www.docker.io) is required.
 
+#### v1.5
+Rename the integration-test in to performance test
+
 #### v1.4
 Introducing the backend-app module where the following modules live in:
 1. Application (app) module, that contains the backend Grocery Application
