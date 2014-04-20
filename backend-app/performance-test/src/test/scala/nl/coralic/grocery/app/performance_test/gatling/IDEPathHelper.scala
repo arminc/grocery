@@ -1,4 +1,4 @@
-package nl.coralic.grocery.app.integration_test.gatling
+package nl.coralic.grocery.app.performance_test.gatling
 
 import scala.tools.nsc.io.File
 import scala.tools.nsc.io.Path.string2path

@@ -1,4 +1,4 @@
-package nl.coralic.grocery.app.integration_test
+package nl.coralic.grocery.app.performance_test
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -19,7 +19,7 @@ class AddGroceryAndVerify extends Simulation {
     .headers(contentTypeJson)
     .body(RawFileBody("oneGroceryItem.json"))
     .check(status.is(200)
-    ,jsonPath("$.").count.is(1)))
+    ,jsonPath("$.").count.is(2)))
 
     .exec(http("Verify no grocery items available")
     .get("/grocery/items")

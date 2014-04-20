@@ -1,4 +1,4 @@
-package nl.coralic.grocery.app.integration_test.gatling
+package nl.coralic.grocery.app.performance_test.gatling
 
 import io.gatling.recorder.config.RecorderPropertiesBuilder
 import io.gatling.recorder.controller.RecorderController
