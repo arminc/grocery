@@ -1,2 +1,2 @@
-Integration-test module is responsible for testing against a running Grocery application. It's goal do integration
-testing and thereby to verify if the Grocery app works when run in docker.
+Performance-test module is responsible for testing against a running Grocery application. It's goal is to verify if the
+application performs well, this is not yet tested correctly. This is just a setup and a try.
