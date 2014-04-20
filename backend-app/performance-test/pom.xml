@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>integration-test</artifactId>
+    <artifactId>performance-test</artifactId>
 
     <properties>
         <integration.test.port>9999</integration.test.port>
