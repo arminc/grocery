@@ -19,7 +19,7 @@ class AddGroceryAndVerify extends Simulation {
     .headers(contentTypeJson)
     .body(RawFileBody("oneGroceryItem.json"))
     .check(status.is(200)
-    ,jsonPath("$.").count.is(2)))
+    ,jsonPath("$.").count.is(1)))
 
     .exec(http("Verify no grocery items available")
     .get("/grocery/items")
