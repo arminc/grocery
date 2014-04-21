@@ -3,6 +3,7 @@ package nl.coralic.grocery.app.performance_test
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import assertions._
+import scala.concurrent.duration.DurationDouble
 
 class AddGroceryAndVerify extends Simulation {
 
@@ -13,7 +14,7 @@ class AddGroceryAndVerify extends Simulation {
 
   val contentTypeJson = Map("Content-Type" -> "application/json")
 
-  val scn = scenario("Add grocery items and verify")
+  val scnOne = scenario("Add grocery items and verify")
     .exec(http("Add one grocery item")
     .post("/grocery/add")
     .headers(contentTypeJson)
@@ -21,12 +22,12 @@ class AddGroceryAndVerify extends Simulation {
     .check(status.is(200)
     ,jsonPath("$.").count.is(1)))
 
-    .exec(http("Verify no grocery items available")
+  val scnTwo = scenario("Verify get items performance")
+    .exec(http("Verify that one grocery item is available")
     .get("/grocery/items")
-    .check(status.is(200)
-    ,jsonPath("$.").count.is(1)))
+    .check(status.is(200)))
 
-  setUp(scn.inject(atOnce(1 user)))
+  setUp(scnOne.inject(atOnce(1 user)), scnTwo.inject(constantRate(2 usersPerSec) during (10 seconds)))
     .protocols(httpProtocol)
     .assertions(global.failedRequests.count.is(0))
 }
