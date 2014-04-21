@@ -2,8 +2,11 @@ package nl.coralic.grocery.app.integration_test
 
 import com.jayway.restassured.RestAssured._
 import org.hamcrest.Matchers._
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
-class VerifyRestApi extends BaseSpec {
+@RunWith(classOf[JUnitRunner])
+class VerifyRestApiSpec extends BaseSpec {
 
   private val url = "http://localhost:9999/grocery"
 

@@ -10,6 +10,7 @@ To be able to build the full Grocery application [Docker](https://www.docker.io)
 
 #### v1.5
 Rename the integration-test in to performance test because running integration with gatling does not seem so intuitive.
+Adding an actual integration-test based on rest-assured.
 
 #### v1.4
 Introducing the backend-app module where the following modules live in:
